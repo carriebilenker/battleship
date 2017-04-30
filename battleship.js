@@ -27,12 +27,10 @@ while (isSunk == false) {
         }
 var stats = "You took " +  guessTotal + " hits to sink the battleship"  +
              " which means your shooting accuracy was " + (3/guessTotal);
-alert (stats);
+        alert (stats);
 
 
-
-       /*
-
+/*
 if (guessTotal == 3) {
   alert ("You're a DESTROYER! Excellent game!");
 } if (guessTotal <= 5) {
