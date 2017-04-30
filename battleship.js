@@ -25,7 +25,6 @@ while (isSunk == false) {
           isSunk = true;
           alert ("You sank the battleship!");
         }
-    }
 var stats = "You took " +  guessTotal + " hits to sink the battleship"  +
              " which means your shooting accuracy was " + (3/guessTotal);
 alert (stats);
