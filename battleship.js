@@ -7,32 +7,27 @@ var guessTotal = 0;
 var isSunk = false;
 /* Start of user loop */
 while (isSunk == false) {
-  userguess = prompt ("Ready, aim, fire! Enter a number between 0 and 6 to hit the battleship:");
-  if (guess < 0 || guess > 6) {
-    alert ("Enter a valid cell number to play (0-6)");
+  userGuess = prompt ("Ready, aim, fire! Enter a number between 0 and 6 to hit the battleship:");
+  if (userGuess < 0 || userGuess > 6) {
+    alert ("Enter a valid cell number to play! (0-6)");
   } else {
-    guessTotal = guessTotal + 1;
-  }
+   guessTotal = guessTotal + 1;
   /* "If userGuess is equal to location 1 OR  userGuess is equal to location 2..."*/
       if (userGuess == location1 || userGuess == location2 || userGuess == location3) {
         alert ("HIT!");
         hits = hits + 1;
+      } else {
+        alert ("MISS!")
+      }
   /* "Alert the user they hit, then log hits = hits + 1"*/
-
   /*close the while loop when hits == 3*/
         if (hits == 3) {
           isSunk = true;
           alert ("You sank the battleship!");
-      } else {
-        alert ("MISS!");
-      }
-
-      }
+        }
     }
-  }
-
-var stats = "You took" + guessTotal + "hits to sink the battleship" +
-             "which means your shooting accuracy was" + (3/guessTotal);
+var stats = "You took " +  guessTotal + " hits to sink the battleship"  +
+             " which means your shooting accuracy was " + (3/guessTotal);
 alert (stats);
 
 
